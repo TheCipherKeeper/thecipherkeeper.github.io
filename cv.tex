@@ -1,0 +1,232 @@
+%----------------------------------------------------------------------------------------
+%	CV - МУХИН АЛЕКСАНДР (Professional Style - Clean)
+%----------------------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+% Encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+
+% Page layout - normal margins
+\usepackage[left=1.5cm, right=1.5cm, top=0.5cm, bottom=1cm]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+
+% Colors
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primary}{HTML}{1E3A5F}
+\definecolor{accent}{HTML}{E63946}
+\definecolor{lightbg}{HTML}{F8F9FA}
+\definecolor{midgray}{HTML}{636E72}
+
+% Graphics
+\usepackage{tikz}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary,
+    linkcolor=primary
+}
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.2em, nosep, topsep=0pt, itemsep=2pt, label={\color{accent}\faIcon{angle-right}}}
+
+% Tables
+\usepackage{tabularx}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Custom commands
+\newcommand{\metric}[1]{\textcolor{accent}{\textbf{#1}}}
+\newcommand{\techbadge}[1]{%
+    \tikz[baseline=(char.base)]{
+        \node[fill=primary!10, rounded corners=2pt, inner sep=3pt, text=primary] (char) {\small\texttt{#1}};
+    }%
+}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER - Simple table approach
+%----------------------------------------------------------------------------------------
+\noindent
+\fcolorbox{primary}{primary}{%
+\hspace{0.3cm}%
+\begin{minipage}[c][3.2cm]{\dimexpr\textwidth-2\fboxsep-2\fboxrule-0.6cm}
+    \vspace{0.3cm}
+    \begin{minipage}[c]{0.6\textwidth}
+        {\Huge\bfseries\color{white} Александр Мухин}\\[6pt]
+        {\large\color{white} Middle+ FullStack Developer}\\[8pt]
+        {\color{white}\small
+        \faIcon{shield-alt}~Red/Blue Team Expert \quad
+        \faIcon{code}~6+ лет в IT \quad \\
+        \faIcon{users}~20+ обученных специалистов
+        }
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[c]{0.35\textwidth}
+        \raggedleft
+        {\color{white}
+        \faIcon{phone}~\href{tel:+79933762079}{\textcolor{white}{+7 (993) 376-20-79}}\\[4pt]
+        \faIcon{telegram}~\href{https://t.me/CipherKeeper}{\textcolor{white}{@CipherKeeper}}\\[4pt]
+        \faIcon{github}~\href{https://github.com/TheCipherKeeper}{\textcolor{white}{TheCipherKeeper}}\\[4pt]
+        \faIcon{map-marker-alt}~Москва, Россия
+        }
+    \end{minipage}%
+    \hspace{0.3cm}
+    \vspace{0.3cm}
+\end{minipage}%
+}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------------------------------------
+%	KEY ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+\noindent
+\fcolorbox{lightbg}{lightbg}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule}
+    \centering
+    \vspace{8pt}
+    {\large\bfseries\color{primary} Ключевые достижения}\\[8pt]
+    \begin{tabular}{c@{\hspace{1cm}}c@{\hspace{1cm}}c@{\hspace{1cm}}c}
+        {\Huge\color{accent}\textbf{8ч}} & {\Huge\color{accent}\textbf{98.5\%}} & {\Huge\color{accent}\textbf{15+}} & {\Huge\color{accent}\textbf{20+}}\\[2pt]
+        {\small\color{midgray}релизный цикл} & {\small\color{midgray}uptime систем} & {\small\color{midgray}расследованных} & {\small\color{midgray}обучено специалистов}\\
+        {\scriptsize\color{midgray}было 2 недели} & {\scriptsize\color{midgray}после миграции} & {\scriptsize\color{midgray}инцидентов} & {\scriptsize\color{midgray}junior $\rightarrow$ middle}
+    \end{tabular}
+    \vspace{8pt}
+\end{minipage}%
+}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------------------------------------
+%	PROFILE
+%----------------------------------------------------------------------------------------
+{\color{primary}\faIcon{bolt}~\textbf{\large Профиль}}\\[4pt]
+Практик с глубокой экспертизой в информационной безопасности и fullstack-разработке. 
+Строю системы, которые \textbf{работают под нагрузкой} и \textbf{защищены by design}. 
+Умею находить и закрывать уязвимости с обеих сторон баррикад (Red/Blue Team). 
+Довожу проекты до production и передаю знания команде.
+
+\vspace{0.3cm}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+{\color{primary}\faIcon{briefcase}~\textbf{\large Опыт работы}}
+\vspace{2pt}
+\hrule height 2pt
+\vspace{6pt}
+
+\noindent
+{\large\bfseries Middle+ FullStack Developer} \hfill {\color{accent}\textbf{2025 -- н.в.}}\\
+{\color{midgray}\textit{МФТИ} | Москва}\\[0pt]
+\begin{itemize}
+    \item Сократил релизный цикл \metric{с 2 недель до 8 часов} через CI/CD
+    \item Перевёл монолит на микросервисы: uptime вырос до \metric{98.5\%}
+    \item Менторил \metric{10+ разработчиков}
+\end{itemize}
+\techbadge{Go} \techbadge{Python} \techbadge{PostgreSQL} \techbadge{Redis} \techbadge{NATS} \techbadge{Docker}
+
+\vspace{36pt}
+
+\noindent
+{\large\bfseries Глава отдела ИБ (Blue Team)} \hfill {\color{accent}\textbf{2023 -- 2025}}\\
+{\color{midgray}\textit{Стратегическое государственное предприятие} | (под NDA)}\\[0pt]
+\begin{itemize}
+    \item Построил \metric{с нуля} систему мониторинга и реагирования на инциденты
+    \item Сократил время обнаружения угроз с часов до \metric{минут} через внедрение SIEM
+    \item Провёл \metric{15+} расследований инцидентов на связанных предприятиях
+\end{itemize}
+\techbadge{BloodHound} \techbadge{Sysmon} \techbadge{Kibana} \techbadge{Logstash} \techbadge{WireShark}
+
+\vspace{36pt}
+
+\noindent
+{\large\bfseries Пентестер (Red Team)} \hfill {\color{accent}\textbf{2022 -- 2023}}\\
+{\color{midgray}\textit{Стратегическое государственное предприятие} |  (под NDA)}\\[0pt]
+\begin{itemize}
+    \item Разработал \metric{собственные инструменты} для автоматизации пентеста
+    \item Руководил R\&D-направлением: от идеи до PoC за \metric{2-3 недели}
+\end{itemize}
+\techbadge{CME} \techbadge{winPEAS} \techbadge{Inveigh} \techbadge{Chisel} \techbadge{gowitness}
+
+\vspace{36pt}
+
+\noindent
+{\large\bfseries Преподаватель / Ментор} \hfill {\color{accent}\textbf{2019 -- 2022}}\\
+{\color{midgray}\textit{Частная практика}}\\[0pt]
+\begin{itemize}
+    \item Обучил \metric{20+ студентов} с нуля до уровня трудоустройства в IT
+    \item \metric{90\%+ выпускников} успешно трудоустроились в течение 3 месяцев
+\end{itemize}
+
+\vspace{1.3cm}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+{\color{primary}\faIcon{tools}~\textbf{\large Технический арсенал}}
+\vspace{2pt}
+\hrule height 2pt
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{@{}p{3cm}X@{}}
+    \textbf{Backend:} & Go, Python, TypeScript, PostgreSQL, Redis, Neo4j, NATS, gRPC\\[2pt]
+    \textbf{DevOps:} & Docker, Kubernetes, GitLab CI/CD, Ansible, Terraform\\[2pt]
+    \textbf{Security:} & BloodHound, WireShark, Sysmon, ELK, Burp Suite, Metasploit\\[2pt]
+    \textbf{Frontend:} & React, SolidJS, TailwindCSS\\
+\end{tabularx}
+
+\vspace{0.3cm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+{\color{primary}\faIcon{graduation-cap}~\textbf{\large Образование}}
+\vspace{2pt}
+\hrule height 2pt
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \textbf{МФТИ} — Школа Игоря Рыбакова (магистратура) & 2024 -- н.в.\\
+    \textbf{МФТИ} — Методы продвинутого ML (переквалификация) & 2025 -- н.в.\\
+    \textbf{ЦГМА} — Клиническая психология (переквалификация) & 2025 -- н.в.\\
+    \textbf{ИКСИ} — Информационная безопасность & 2017 -- 2021\\
+\end{tabularx}
+
+\vspace{0.3cm}
+
+%----------------------------------------------------------------------------------------
+%	BOTTOM ROW
+%----------------------------------------------------------------------------------------
+\begin{minipage}[t]{0.32\textwidth}
+    {\color{primary}\faIcon{language}~\textbf{\large Языки}}
+    \vspace{2pt}
+    \hrule height 2pt
+    \vspace{4pt}
+    \textbf{Русский} — родной\\
+    \textbf{Английский} — B1
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.63\textwidth}
+    {\color{primary}\faIcon{rocket}~\textbf{\large Подход к работе}}
+    \vspace{2pt}
+    \hrule height 2pt
+    \vspace{4pt}
+    \metric{Результат важнее процесса} — довожу задачи до production\\
+    \metric{Hands-on} — пишу код, а не только управляю\\
+    \metric{Security-first} — безопасность закладывается в архитектуру
+\end{minipage}
+
+\end{document}
